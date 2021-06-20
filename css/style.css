@@ -41,7 +41,7 @@
         align-items: center;
     }
     .scrolled {
-        background-color: black !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
         backdrop-filter: blur(8px);
         transition: ease-in-out 200ms;
       }
@@ -217,12 +217,16 @@
         height: auto;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(auto-fill, 100px);
+        grid-template-rows: repeat(auto-fill, auto);
+        background: url(images/dyn\ bg.png);
+        background-position: center;
+        background-size: cover;
     }
     .card {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
         width: 100%;
+        backdrop-filter: blur(8px);
       }
       .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -236,9 +240,27 @@
           text-transform: uppercase;
       }
       .container a{
+          font-size: 25px;
           text-decoration: none;
-          color: var(--blue);
+          color: var(--pink);
       }
+      .container a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    #facts > div{
+        width: 100%;
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(auto-fill, auto);
+        grid-gap: 50px;
+    }
+    #facts h1 {
+        text-transform: uppercase;
+        text-align: center;
+    }
 
     @media (min-width : 1126px){
         .burger, #burger-bg{
@@ -296,7 +318,6 @@
             cursor: pointer;
         }
         #facts{
-            height: 100vh;
             padding: 30px;
             display: grid;
             grid-template-columns: 5% 95%;
@@ -316,5 +337,6 @@
             writing-mode: vertical-lr;
             text-orientation: upright;
             border-right: 1px solid black;
+            text-align: start;
         }
     }
