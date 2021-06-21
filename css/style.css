@@ -339,6 +339,7 @@
         justify-content: center;
         text-transform: uppercase;
         background: -webkit-linear-gradient(var(--pink), var(--gray));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
