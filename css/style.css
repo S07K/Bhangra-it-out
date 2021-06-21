@@ -7,7 +7,7 @@
     --yellow : rgb(253, 227, 66);
     --gray : rgb(137, 132, 132);
     scroll-behavior: smooth;
-    font-family: candara;
+    font-family: 'Poppins', sans-serif;
 }
 
 #thought-behind{
@@ -53,6 +53,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: candara !important;
     }
     #links div
     {
@@ -113,13 +114,20 @@
         transition: transform 0.4s ease-in;
     }
     .nav-links::before{
-        width: inherit;
-        height: inherit;
-        background-color: whitesmoke;
+        content: "";
+        position: absolute;
+        top: 20vh;
+        width: 70%;
+        height: 60vh;
+        border: 1px solid gray;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
     }
     .nav-links div a
     {
         opacity: 1;
+        font-weight: 900;
         text-shadow: rgba(77, 77, 77, 0.7);
         color: var(--pink) !important;
     }
@@ -139,6 +147,9 @@
         width: 80px;
         height: 70px;
         border-radius: 10px;
+    }
+    .logo span{
+        font-family: 'Dancing Script', cursive
     }
     .nav-active
     {
@@ -209,8 +220,8 @@
         border-radius: 30px;
         font-size: 20px;
         border: none;
-        background: var(--gray);
-        color: whitesmoke;
+        background: var(--yellow);
+        color: var(--pink);
         align-items: center;
     }
     #facts{
@@ -258,10 +269,112 @@
         grid-gap: 50px;
     }
     #facts h1 {
+        font-family: candara;
         text-transform: uppercase;
         text-align: center;
     }
 
+    #explore{
+        width: 100%;
+        height: 50vh;
+        display: grid;
+        padding: 50px 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+        grid-gap: 30px;
+        background: linear-gradient(360deg, rgb(253, 227, 66),rgb(0, 175, 240));
+        color: whitesmoke;
+    }
+    #explore h1 {
+        font-family: candara;
+        padding: 10px;
+        text-align: center;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .btns button{
+        font-family: candara;
+        width: 250px;
+        height: 50px;
+        border: none;
+        background-color: whitesmoke;
+        color: var(--blue);
+        font-size: 25px;
+        text-decoration: underline;
+        text-decoration-color: var(--pink);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .btns button:hover{
+        /* background-color: var(--pink); */
+        text-decoration-color: var(--yellow);
+        cursor: pointer;
+    }
+    #events-bg{
+        height: auto;
+        background: url(images/IMG_7631.JPG);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #events{
+        width: 90%;
+        height: auto;
+        background-color: rgb(245, 245, 245, 0.9);
+        backdrop-filter: blur(8px);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% repeat(auto-fill, auto);
+    }
+    #events > h1{
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background: -webkit-linear-gradient(var(--pink), var(--gray));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #events > h1 span{
+        text-decoration: underline;
+        text-decoration-color: var(--yellow);
+    }
+    .calender{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(auto-fill, auto);
+        padding: 20px;
+        grid-gap: 30px;
+    }
+    .calender a {
+        color: var(--pink);
+        text-decoration-color: var(--blue);
+        text-decoration-thickness: 3px;
+    }
+    .featured-events{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-bottom: 1px solid var(--gray);
+        line-height: 20px;
+    }
+    .featured-events:first-child{
+        border-top: 1px solid var(--gray);
+    }
+    .dates{
+        color: var(--blue);
+    }
+    .time{
+        color: var(--gray);
+    }
     @media (min-width : 1126px){
         .burger, #burger-bg{
             display: none;
@@ -310,18 +423,20 @@
             align-self: center;
         }
         #front-content button:hover{
-            background-color: var(--yellow);
+            background-color: var(--blue);
             transition: ease 0.6s;
-            color: var(--pink);
+            color: whitesmoke;
             font-weight: bold;
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             cursor: pointer;
+            transform: scale(1.2);
+            transition: ease-in-out 0.6s;
         }
         #facts{
             padding: 30px;
             display: grid;
             grid-template-columns: 5% 95%;
-            grid-template-rows: 65vh;
+            grid-template-rows: 70vh;
         }
         #facts > div{
             width: 100%;
@@ -332,11 +447,61 @@
             grid-gap: 50px;
         }
         #facts h1 {
-            font-size: 20px;
             text-transform: uppercase;
             writing-mode: vertical-lr;
             text-orientation: upright;
             border-right: 1px solid black;
             text-align: start;
+        }
+        #explore{
+            grid-gap: 10px;
+        }
+        #explore h1 {
+            font-size: 50px;
+        }
+        .btns{
+            flex-direction: row;
+        }
+        .btns button{
+            width: 500px;
+            height: 70px;
+            font-size: 35px;
+        }
+        #events-bg{
+            height: 85vh;
+        }
+        #events{
+            width: 90%;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100%;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        #events > h1{
+            font-size: 80px;
+            padding: 50px 30px;
+            text-shadow: 0 4px 8px var(--pink);
+        }
+        .calender{
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(2, auto);
+            padding: 50px 30px;
+        }
+        .calender a:hover {
+            transition: ease-in-out 0.3s;
+            color: var(--blue);
+        }
+        .featured-events{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-bottom: 1px solid var(--gray);
+            line-height: 20px;
+        }
+        .featured-events:first-child{
+            border-top: none;
+        }
+        .border-right{
+            border-right: 1px solid var(--gray);
         }
     }
