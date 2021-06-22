@@ -147,9 +147,11 @@
         width: 80px;
         height: 70px;
         border-radius: 10px;
+        cursor: pointer;
     }
     .logo span{
-        font-family: 'Dancing Script', cursive
+        font-family: 'Dancing Script', cursive;
+        cursor: pointer;
     }
     .nav-active
     {
@@ -168,14 +170,14 @@
     }
     .toggle .line1{
         transform: rotate(-45deg) translate(-5px, 6px);
-        background-color: var(--blue);
+        background-color: var(--pink);
     }
     .toggle .line2{
         opacity: 0;
     }
     .toggle .line3{
         transform: rotate(45deg) translate(-5px, -6px);
-        background-color: var(--gray);
+        background-color: var(--pink);
 
     }
 
@@ -376,6 +378,134 @@
     .time{
         color: var(--gray);
     }
+
+    #vision-mission{
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .b-logo{
+        max-width: 100%;
+        height: auto;
+    }
+    .vision, .mission{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+    #vision-mission button{
+        width: 200px;
+        height: 40px;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 900;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+    }
+    #Btn1{
+        border: 2px solid var(--blue);
+        color: var(--blue);
+    }
+    #Btn2{
+        border: 2px solid var(--pink);
+        color: var(--pink);
+    }
+    #Btn1:hover{
+        color: var(--yellow);
+        background-color: var(--blue);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    #Btn2:hover{
+        color: var(--yellow);
+        background-color: var(--pink);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        backdrop-filter: blur(8px);
+        transition: ease-in-out 1s;
+    }
+    
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.5s;
+        animation-name: animatetop;
+        animation-duration: 0.5s;
+    }
+    
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {bottom:-300px; transform: scale(0); opacity:0} 
+        to {bottom:0; transform: scale(1); opacity:1}
+    }
+    
+    @keyframes animatetop {
+        from {bottom:-300px; transform: scale(0); opacity:0}
+        to {bottom:0; transform: scale(1); opacity:1}
+    }
+    
+    /* The Close Button */
+    .close1, .close2 {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close1:hover,
+    .close1:focus, .close2:hover, .close2:focus {
+        color: rgb(235, 226, 226);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .modal-header {
+        padding: 2px 16px;
+        color: white;
+    }
+    .modal-header-vision{
+        background-color: var(--blue);
+    }
+    .modal-header-mission{
+        background-color: var(--pink);
+    }
+    .modal-body {padding: 2px 16px;}
+    
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+    .modal-footer-vision{
+        background-color: var(--blue);
+    }
+    .modal-footer-mission{
+        background-color: var(--pink);
+    }
+
     @media (min-width : 1126px){
         .burger, #burger-bg{
             display: none;
@@ -481,6 +611,7 @@
             font-size: 80px;
             padding: 50px 30px;
             text-shadow: 0 4px 8px var(--pink);
+            cursor: pointer;
         }
         .calender{
             grid-template-columns: repeat(3,auto);
@@ -488,8 +619,9 @@
             padding: 50px 30px;
         }
         .calender a:hover {
-            transition: ease-in-out 0.3s;
+            transition: ease-in-out 300ms;
             color: var(--blue);
+            font-weight: 900;
         }
         .featured-events{
             height: 200px;
@@ -504,5 +636,11 @@
         }
         .border-right{
             border-right: 1px solid var(--gray);
+        }
+        #vision-mission{
+            flex-direction: row;
+        }
+        .b-logo{
+            align-self: flex-start;
         }
     }
