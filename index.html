@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href=""><img src="css/images/logo.jpg" alt="logo"></a> <span>Bhangra it out !</span>
+            <a href=""><img src="css/images/logo.jpg" alt="logo" style="vertical-align: middle;"></a> <span>Bhangra it out !</span>
         </div>
         <div id="nav-right">
             <div id="links">
@@ -73,7 +75,7 @@
                     </div>
                 </div>
                 <div>
-                    <a href="">Events</a>
+                    <a href="#events-bg">Events</a>
                 </div>
                 <div>
                     <a href="">Our team</a>
@@ -117,8 +119,10 @@
                     </div>
                 </div>
             </div>
-            <div class="qoute"><p>Integer eget malesuada lorem.</p></div>
-        </div>
+            <div class="qoute">
+                <p>Integer eget malesuada lorem.</p>
+                <div class="contact"><a href="">Contact us</a></div>
+            </div>
         <div class="burger">
 			<div class="line1"></div>
 			<div class="line2"></div>
@@ -129,29 +133,29 @@
         <div id="top-wrapper"></div>
         <div id="front-content">
             <div id="latest">
-                <h1>Let bhangra do all the talking and permeate our togetherness.</h1>
+                <h1 class="btn-shine">Let bhangra do all the talking and permeate our togetherness.</h1>
             </div>
-            <button>What’s in for you ?</button>
+            <button class="animate">What’s in for you ?</button>
         </div>
     </div>
     <div id="facts">
         <h1>Do You Know</h1>
         <div>
-            <div class="card">
+            <div class="card" data-aos="fade-up">
                 <img src="css/images/IMG_7631.JPG" alt="" style="width:100%">
                 <div class="container">
                     <h3>Do You Know</h3>
                     <a href=""> Integer eget malesuada lorem.</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up">
                 <img src="css/images/IMG_7631.JPG" alt="" style="width:100%">
                 <div class="container">
                     <h3>Do You Know</h3>
                     <a href=""> Integer eget malesuada lorem.</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up">
                 <img src="css/images/IMG_7631.JPG" alt="" style="width:100%">
                 <div class="container">
                     <h3>Do You Know</h3>
@@ -160,16 +164,16 @@
             </div>
         </div>
     </div>
-    <div id="explore">
+    <div id="explore" data-aos="fade-up" data-aos-duration="1000">
         <h1>Which would you like to explore ?</h1>
         <div class="btns">
-            <button>Aunthetic Bhangra</button>
-            <button>SEL through Bhangra</button>
+            <button data-aos="fade-up" >Aunthetic Bhangra</button>
+            <button data-aos="fade-up" >SEL through Bhangra</button>
         </div>
     </div>
-    <div id="events-bg">
-        <div id="events">
-            <h1> <span>ev</span>ents</h1>
+    <div id="events-bg" data-aos="fade-up" data-aos-duration="4000">
+        <div id="events" data-aos="fade-up" data-aos-duration="4000">
+            <h1 data-aos="fade-right"> <span>ev</span>ents</h1>
             <div class="calender">
                 <div class="featured-events border-right">
                     <div>
@@ -253,7 +257,7 @@
         </div>
     </div>
     <div id="vision-mission">
-        <div class="b-logo">
+        <div class="b-logo" data-aos="flip-left" data-aos-duration="1000">
             <img src="css/images/logo.jpg" alt="logo" style="width:100%">
         </div>
         <div class="vision">
@@ -307,6 +311,16 @@
             </div>
         </div>
     </div>
+    <div id="footer">
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 500
+        });
+    </script>
 </body>
 <script src="script.js"></script>
 </html>

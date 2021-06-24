@@ -30,7 +30,6 @@ const navslide = () => {
 }
 navslide();
 
-
 var nav = document.querySelector(".navbar");
 
 window.addEventListener("scroll", function() {
