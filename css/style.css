@@ -63,10 +63,19 @@
         display: flex;
         flex-direction: column;
         background: var(--blue);
-        /* visibility: hidden; */
         display: none;
     }
-    
+    .active {
+        background-color: var(--yellow);
+        color: var(--blue);
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+      }
+    .dropdown-container {
+        display: none;
+        padding: 10px;
+        border-radius: 10px;
+      }
     li{
         position: relative;
     }
@@ -105,14 +114,14 @@
         justify-content: center;
         transform: translateX(100%);
         transition: transform 0.4s ease-in;
-        overflow-y: scroll;
+        
     }
     .nav-links::before{
         content: "";
         position: absolute;
         top: 2%;
         width: 80%;
-        height: 150vh;
+        height: 100vh;
         border: 1px solid gray;
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0.3);
