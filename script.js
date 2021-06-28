@@ -1,6 +1,6 @@
 if(window.innerWidth <= 1125 )
 {
-    document.querySelector("#links").classList.add("nav-links");
+    document.querySelector("#nav-right ul").classList.add("nav-links");
 }
 
 const navslide = () => {

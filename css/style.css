@@ -10,26 +10,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-#thought-behind{
-    display: none;
-}
-
-#our-sevices{
-    display: none;
-}
-
-#opportunities{
-    display: none;
-}
-
-#repertoire{
-    display: none;
-}
-
-#SEL{
-    display: none;
-}
-
     nav
     {
         position: fixed;
@@ -45,37 +25,50 @@
         backdrop-filter: blur(8px);
         transition: ease-in-out 200ms;
       }
-    #links
+    #nav-right ul li
     {
         margin: 0;
         height: auto;
-        padding: 1px 10px 30px 10px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-family: candara !important;
     }
-    #links div
+    #nav-right ul
     {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-around; */
         padding: 10px;
+        color: var(--pink);
     }
-    #links div a
+    #nav-right ul li a
     {
         font-family: candara;
         font-size: 0.75rem;
-        color: whitesmoke;
+        color: var(--pink);
         text-decoration: none;
         text-transform: uppercase;
         transition: all .3s ease;
         letter-spacing: 2px;
     }
-    #links li{
-        
+    #nav-right ul li{
+        display: flex;
+        flex-direction: column;
         list-style-type: none;
     }
-    #links a{
-        text-decoration: none;
-        color: whitesmoke;
+    #nav-right ul li ul {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        background: var(--blue);
+        /* visibility: hidden; */
+        display: none;
+    }
+    
+    li{
+        position: relative;
     }
     .qoute{
         display: none;
@@ -109,20 +102,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center !important;
+        justify-content: center;
         transform: translateX(100%);
         transition: transform 0.4s ease-in;
+        overflow-y: scroll;
     }
     .nav-links::before{
         content: "";
         position: absolute;
-        top: 20vh;
-        width: 70%;
-        height: 60vh;
+        top: 2%;
+        width: 80%;
+        height: 150vh;
         border: 1px solid gray;
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(8px);
+        z-index: -1;
     }
     .nav-links div a
     {
@@ -141,7 +136,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: whitesmoke;
+        color: white;
     }
     .logo img{
         width: 80px;
@@ -291,7 +286,7 @@
 
     #explore{
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         display: grid;
         padding: 50px 30px;
         grid-template-columns: 100%;
@@ -314,9 +309,10 @@
     }
     .btns button{
         font-family: candara;
-        width: 250px;
-        height: 50px;
+        width: 270px;
+        height: 60px;
         border: none;
+        padding: 10px;
         background-color: whitesmoke;
         color: var(--blue);
         font-size: 22px;
@@ -542,12 +538,62 @@
             grid-template-columns: 30% 70%;
             /* padding: 0 20px 0 20px; */
         }
-        #links{
-            padding-bottom: 1px;
+        #nav-right ul li ul {
+            background: var(--blue);
+            visibility: hidden;
+            opacity: 0;
+            min-width: 11.5rem;
+            border-radius: 0 10px 10px 10px ;
+            position: absolute;
+            transition: all 1s ease-in-out;
+            margin-top: 1rem;
+            top: 5px;
+            left: 0;
+            display: none;
+            float: none;
+            box-shadow: rgba(0, 0, 0, 0.7);
         }
-        #links div a:hover{
+        
+        #nav-right ul li a {
+            clear: both;
+            width: 100%;
+        
+        }
+        #nav-right ul li:hover > ul,
+        #nav-right ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        }
+        li {
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        #nav-right ul{
+            justify-content: space-around;
+        }
+        #nav-right ul li {
+            padding: 5px;
+        }
+        #nav-right ul li a{
+            color: white;
+        }
+        #nav-right ul li ul li a{
+            
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #nav-right ul li a:hover{
             color: var(--pink);
             font-weight: bold;
+        }
+        #nav-right ul li ul li a:hover{
+            color: var(--pink);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--pink);
+            background-color: var(--yellow);
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.7);
         }
         #nav-right{
             display: flex;
