@@ -65,6 +65,10 @@
         background: var(--blue);
         display: none;
     }
+    #nav-right ul li ul li a{
+        color: white ;
+        text-align: center;
+    }
     .active {
         background-color: var(--yellow);
         color: var(--blue);
@@ -121,7 +125,7 @@
         position: absolute;
         top: 2%;
         width: 80%;
-        height: 100vh;
+        height: 95vh;
         border: 1px solid gray;
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0.3);
@@ -529,6 +533,77 @@
         background-color: var(--pink);
     }
 
+    #footer{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px 30px 50px;
+    }
+    .footer-top, .footer-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: var(--gray);
+        border-top: 1px solid rgba(137, 132, 132, 0.3);
+    }
+    .footer-top{
+        flex-direction: column;
+        height: 50vh;
+        padding: 10px ;
+    }
+    .footer-top-right{
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .find-us{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .find-us h1{
+        font-size: 15px;
+        text-align: center;
+    }
+    .find-us > div{
+        text-align: center;
+    }
+    .find-us > div a{
+        font-size: 20px;
+        color: var(--gray);
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    .fa-facebook-f:hover{
+        color: #3B5998;
+    }
+    .fa-instagram:hover{
+        color: #405DE6;
+    }
+    .links h1, .contact-us h1{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .links ul li, a , .contact-us ul li, a{
+        text-decoration: none;
+        list-style: none;
+        color: var(--gray);
+        font-size: 12px;
+        line-height: 2;
+    }
+    .links ul li, a:hover, .contact-us ul li, a:hover{
+        color: var(--pink);
+        font-weight: bold;
+    }
+    .footer-bottom{
+        padding: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+
     @media (min-width : 1126px){
         .burger, #burger-bg{
             display: none;
@@ -556,7 +631,7 @@
             position: absolute;
             transition: all 1s ease-in-out;
             margin-top: 1rem;
-            top: 5px;
+            top: 15px;
             left: 0;
             display: none;
             float: none;
@@ -770,5 +845,22 @@
             height: auto;
             align-self: center;
             
+        }
+        .footer-top{
+            flex-direction: row;
+        }
+        .footer-top-right{
+            width: 30%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .contact-us, .links{
+            text-align: center;
+        }
+        .contact-us h1, .find-us h1, .links h1{
+            padding-bottom: 10px;
         }
     }
